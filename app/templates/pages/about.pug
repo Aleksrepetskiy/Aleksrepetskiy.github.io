@@ -1,0 +1,93 @@
+extends ../template
+block variables
+    - var title = 'Обо мне'
+    - var title__pic = 'img class="section__title__pic" src="images/portfolio_header.png"'
+block content
+    include ../common/header.pug
+    section.section.about
+        div.bloc-decor
+            include ../common/triangle.pug
+        div.about__left
+            div.about__left-title
+                div.block-title Обо мне
+                    div.title-bg__about
+            div.about__left-content
+                div.user-description
+                    div.user-description__img
+                        img.user-description__avatar(src="images/repeckiy_full.jpg", alt="")
+                    div.user-description__title
+                        div.block-subtitle Кто я
+                    div.user-description__text
+                        p Я веб разработчик из Киева. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        div.about__right
+            div.about__right-title
+                div.block-subtitle Чем я могу быть вам полезен
+            div.about__right-description.text-content
+                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+            div.about__right-content
+                ul.skills-list
+                        li.skills-list__item
+                            div.skills-row
+                                div.skills-row__title Frontend
+                                ul.skills-row__list
+                                    each skill in ['HTML5', 'CSS3', 'JavaScript']
+                                        li.skills-row__item
+                                            div.skill
+                                                svg.skill__circle(viewBox="0 0 110 110")
+                                                    circle( data-v-7aa2d04c="" r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                                                    circle(data-v-7aa2d04c="" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle__second--${skill}`)
+                                                .skill__title #{skill}
+                        li.skills-list__item
+                            div.skills-row
+                                div.skills-row__title Backend
+                                ul.skills-row__list
+                                    - 
+                                       var skill = [
+                                         ['PHP', 'PHP'],
+                                         ['mySQL', 'mySQL'],
+                                         ['Node.js  npm', 'Node'],
+                                         ['Mongo.db', 'Mongo'],
+                                       ]
+                                    each item in skill
+                                        li.skills-row__item
+                                            div.skill
+                                                svg.skill__circle(viewBox="0 0 110 110")
+                                                    circle( data-v-7aa2d04c="" r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                                                    circle(data-v-7aa2d04c="" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle__second--${item[1]}`)
+                                                .skill__title #{item[0]}
+                        li.skills-list__item
+                            div.skills-row
+                                div.skills-row__title Workflow
+                                ul.skills-row__list
+                                    each skill in ['Git', 'Gulp', 'Bower']
+                                        li.skills-row__item
+                                            div.skill
+                                                svg.skill__circle(viewBox="0 0 110 110")
+                                                    circle( data-v-7aa2d04c="" r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                                                    circle(data-v-7aa2d04c="" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle__second--${skill}`)
+                                                .skill__title #{skill}
+            
+    section.section.map
+        .map__data
+            .contacts
+                .contacts__title
+                    div.block-subtitle Контакты
+                ul.contacts__list
+                    -
+                        var contacts = [
+                        ['skype', 'aleksrepetskiy'],
+                        ['envelope2', 'repetskiyaleksandr@gmail.com'],
+                        ['phone2', '+38063 737 77 28'],
+                        ['map_marker', 'Киев'],
+                        ]
+                    each item in contacts
+                            li.contacts__item
+                                .contacts-row
+                                    svg(class=`contacts-row__icon contacts-row__icon--${item[0]}`)
+                                       use(xlink:href=`images/icons/sprite.svg#${item[0]}`)
+                                    .contacts-row__content.text #{item[1]}
+        .google-map
+            img(src="images/map.jpg", alt="")
+
+    include ../common/footer.pug

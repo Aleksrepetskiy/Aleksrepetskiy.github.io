@@ -1,0 +1,16 @@
+.bloc-decor {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -150px;
+}
+.decor {
+    display: flex;
+}
+.decor__triang {
+    width: 50%;
+}
+.triangle {
+	max-height: 150px;
+	width: 100%;
+}

@@ -1,0 +1,156 @@
+.hero {
+    background: url('../images/water.jpg') no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+    position: relative;
+}
+.about .decor__triang--left {
+    fill: #ebefe2;
+}
+.about .decor__triang--right {
+    fill: #f4f5f0;
+}
+.hero__social {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+.hero__social .social .icon-svg {
+    fill: $white;
+}
+.hero__social .social .icon-svg:hover {
+    fill: $green;
+}
+.hero__menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.section__title {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero__user {
+    position: relative;
+    z-index: 1;
+}
+.user__img {
+    margin-bottom: 30px;
+}
+.hero__scroll-btn {
+    position: absolute;
+    bottom: 70px;
+}
+.about {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+.about__left, .about__right {
+    position: relative;
+    width: 50%;
+    z-index: 0;
+    display: flex;
+    padding: 20px 20px 0 20px;
+}
+.about__left {
+    background-color: #ebefe2;
+    flex-wrap: wrap;
+}
+.about__right {
+    background-color: #f4f5f0;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.about__triangle {
+    position: absolute;
+    top: -167px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.about__triangle--right {
+    // top: -164px;
+}
+.about__right-title, .about__right-description, .about__right-content, .about__left-title, .about__left-description, .about__left-content {
+    position: relative;
+    z-index: 1;
+}
+.about__left-title, .about__left-content {
+    width: 50%;
+}
+.about__left-title {
+    position: relative;
+}
+.user-description__img {
+    margin-bottom: 30px;
+}
+.about__right-title {
+    text-align: center;
+}
+.circle__second--HTML5 {
+    stroke-dasharray: 240 282.6;
+}
+.circle__second--CSS3 {
+    stroke-dasharray: 260 282.6;
+}
+.circle__second--JavaScript {
+    stroke-dasharray: 100 282.6;
+}
+.circle__second--PHP {
+    stroke-dasharray: 50 282.6;
+}
+.circle__second--mySQL {
+    stroke-dasharray: 10 282.6;
+}
+.circle__second--Node {
+    stroke-dasharray: 150 282.6;
+}
+.circle__second--Mongo {
+    stroke-dasharray: 10 282.6;
+}
+.circle__second--Git {
+    stroke-dasharray: 180 282.6;
+}
+.circle__second--Gulp {
+    stroke-dasharray: 200 282.6;
+}
+.circle__second--Bower {
+    stroke-dasharray: 200 282.6;
+}
+.contacts-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contacts-row__icon {
+    width: 22px;
+    height: 30px;
+    fill: $green;
+    margin-right: 15px;
+}
+.map {
+    position: relative;
+}
+.map__data {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(244, 245, 240, 0.85);
+    border-radius: 10px;
+}
+.contacts__title {
+    text-align: center;
+}
+.contacts {
+    padding: 30px;
+    min-width: 380px;
+}
+.contacts__item {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,39 @@
+section.section.hero.flex-box
+    div.hero__social
+        ul.social
+            - 
+                var soc = [
+                ['vk', 'https://vk.com/id10183899'],
+                ['github', 'https://github.com/Aleksrepetskiy'],
+                ['in', 'https://www.linkedin.com/in/aleksrepetskiy/'],
+                ]
+            each item in soc
+                    li.social__item
+                        a(href=`${item[1]}` class=`social__link social__link--${item[0]}`)
+                            svg(class=`icon-svg icon-svg--${item[0]}`)
+                                use(xlink:href=`images/icons/sprite.svg#${item[0]}`) 
+    div.hero__menu.hamburger
+        ul.menu(style="display:none")
+            - 
+                var itemk = [
+                ['Мои работы', '/portfolio.html'],
+                ['Обо мне', '/about.html'],
+                ['Блог', '/blog.html'],
+                ['Авторизация', '/index.html'],
+                ]
+            each item in itemk
+                    li.menu__item
+                        a.menu__link(href=`${item[1]}`, target="_blank") #{item[0]}
+    div.hero__title
+        div.section__title
+            #{title__pic}
+            //- img.section__title__pic(src="images/portfolio_header.png", alt="")
+            
+        div.hero__user.user
+            div.user__img
+                img(src="images/repeckiy.jpg", alt="")
+            div.user__description
+                div.user__name Репецкий Александр
+                div.user__info Личный сайт веб разработчика
+    div.hero__scroll-btn
+        button(type="button").arrow-down 

@@ -1,0 +1,45 @@
+- 
+    var page = [
+    ['Мои работы', '/portfolio.html'],
+    ['Обо мне', '/about.html'],
+    ['Блог', '/blog.html'],
+    ['Авторизация', '/index.html'],
+    ]
+    var soc = [
+    ['vk', 'https://vk.com/id10183899'],
+    ['github', 'https://github.com/Aleksrepetskiy'],
+    ['in', 'https://www.linkedin.com/in/aleksrepetskiy/'],
+    ]
+    
+footer.footer
+    div.footer__row.footer__row--grey
+        div.footer__col.footer__col-left
+            .footer__text.text-content
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования 
+        div.footer__col.footer__col-center
+            div.footer__menu
+                nav.nav
+                    ul.nav__list
+                        each item in page
+                            li.nav__item
+                                a.nav__link(href=`${item[1]}`, target="_blank") #{item[0]}
+                div.footer__social
+                    ul.social
+                        each item in soc
+                                li.social__item
+                                    a(href=`${item[1]}` class=`social__link social__link--${item[0]}`)
+                                        svg(class=`icon-svg icon-svg--${item[0]}`)
+                                            use(xlink:href=`images/icons/sprite.svg#${item[0]}`) 
+        div.footer__col.footer__col-right
+            .footer__text.text-content
+                blockquote
+                    p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                    p — Martin Golding 
+    div.footer__row.footer__row--green
+        div.footer__col--full
+            .copyrating 
+                span.copyrating__line.copyrating__line--name &copy; Репецкий Александ
+                span.copyrating__line создано с любовью в LoftSchool
+                span 2017
+        
+    

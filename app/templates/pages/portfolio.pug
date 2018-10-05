@@ -1,0 +1,65 @@
+extends ../template
+block variables
+    - var title = 'Портфоио'
+block content
+    include ../common/header.pug
+    section.section.portfolio
+        div.bloc-decor
+            include ../common/triangle.pug
+        div.portfolio__title
+            div.block-title Мои работы
+                div.title-bg__works
+        div.portfolio__slider
+            div.slider
+                
+        div.portfolio__content
+            div.portfolio__title
+                div.block-title Что обо мне говорят
+                    div.container.title-bg__about
+            div.portfolio__rewiews
+                div.container
+                    div.rewiews 
+                        div.rewiew
+                            div.rewiew__foto
+                                img(src="images/rewiews/1.png", alt="")
+                            div.rewiew__text.
+                                Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                            div.rewiew__signature 
+                                div.rewiew__name Ковальчук Дмитрий 
+                                div.rewiew__position — основатель Loftschool
+                        div.rewiew
+                            div.rewiew__foto
+                                img(src="images/rewiews/2.png", alt="")
+                            div.rewiew__text.
+                                Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                            div.rewiew__signature 
+                                div.rewiew__name Сабанцев Владимир 
+                                div.rewiew__position — преподаватель
+            div.portfolio__form
+                div.form
+                    form(id="", method="", action="")
+                        div.block-subtitle Связаться со мной
+                        div.input-container
+                            div.input__box
+                                input.input(
+                                  type='text'
+                                  name='name'
+                                  placeholder="Имя"
+                                ) 
+                            div.input__box
+                                input.input(
+                                  type='e-mail'
+                                  name='e-mail'
+                                  placeholder="Email"
+                                ) 
+                            div.input__box
+                                textarea.input(rows="6"
+                                  placeholder="Ваше сообщение"
+                                ) 
+                        .autorization__buttons.flex-box
+                            button.button(type='submit') Отправить
+                            button.button(type='reset') Очистить
+            div.portfolio__arrow
+                button(type="button").arrow-up 
+
+    include ../common/footer.pug

@@ -1,0 +1,10 @@
+.menu__list {
+    margin: 0;
+    padding: 0;
+    .menu__item {
+        display: inline-block;
+    }
+    .menu__link {
+        color: red;
+    }
+}
