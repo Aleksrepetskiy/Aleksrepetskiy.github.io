@@ -60,17 +60,18 @@
 	fill: $green;
 }
 
+.avatar {
+	&__box {
+		border-radius: 50% 50%;
+		overflow: hidden;
+		width: 140px;
+		margin: 0 auto;
+	}
+	margin-bottom: 30px;
+}
 .user {
 	text-align: center;
 }
-
-.user__img {
-	border-radius: 100%;
-	overflow: hidden;
-	max-width: 140px;
-	margin: 0 auto;
-}
-
 .user__name {
 	font-size: 35px;
 	font-weight: 500;
