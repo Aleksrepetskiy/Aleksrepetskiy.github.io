@@ -185,11 +185,13 @@
         height: 87px;
         top: 32%;
     }
-
 }
-
 @media only screen and (max-width : 400px){
-    .autorization {
+    .flipper {
+        max-width: 300px;
+        height: 416px;
+    }
+    .autorization, .autorization-registr  {
         max-width: 300px;
         min-width: 0;
     }

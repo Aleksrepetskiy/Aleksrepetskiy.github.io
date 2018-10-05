@@ -1,4 +1,6 @@
 section.section.hero.flex-box
+    div.hero__background
+        canvas.Background-canvas
     div.hero__social
         ul.social
             - 
@@ -12,8 +14,12 @@ section.section.hero.flex-box
                         a(href=`${item[1]}` class=`social__link social__link--${item[0]}`)
                             svg(class=`icon-svg icon-svg--${item[0]}`)
                                 use(xlink:href=`images/icons/sprite.svg#${item[0]}`) 
-    div.hero__menu.hamburger
-        ul.menu(style="display:none")
+    div.hero__menu
+        div.hamburger#hamburger
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        ul.menu#menu
             - 
                 var itemk = [
                 ['Мои работы', '/portfolio.html'],

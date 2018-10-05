@@ -1,0 +1,153 @@
+.hero {
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+    position: relative;
+}
+.hero__background{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.hero__social {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+.hero__social .social .icon-svg {
+    fill: $white;
+}
+.hero__social .social .icon-svg:hover {
+    fill: $green;
+}
+.hero__menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.social {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.social__item + .social__item {
+	margin-left: 10px;
+}
+
+.social__link {
+	display: block;
+}
+
+.icon-svg {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	fill: $litegray;
+	cursor: pointer;
+}
+
+.icon-svg--in {
+	height: 22px;
+}
+
+.icon-svg:hover {
+	fill: $green;
+}
+
+.user {
+	text-align: center;
+}
+
+.user__img {
+	border-radius: 100%;
+	overflow: hidden;
+	max-width: 140px;
+	margin: 0 auto;
+}
+
+.user__name {
+	font-size: 35px;
+	font-weight: 500;
+	line-height: 41px;
+	color: $white;
+}
+
+.user__info {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: $white;
+}
+
+.user-description__title {
+	text-align: center;
+}
+.hamburger {
+	width: 40px;
+	height: 35px;
+	cursor: pointer;
+	z-index: 10;
+	position: relative;
+}
+.hamburger .line{
+  width: 40px;
+  height: 5px;
+  background-color: #ecf0f1;
+  border-radius: 2px;
+  display: block;
+  margin: 10px auto;
+  transition: all 0.3s ease-in-out;
+}
+#hamburger.active .line:nth-child(2){
+  opacity: 0;
+}
+#hamburger.active .line:nth-child(1){
+  transform: translateY(15px) rotate(45deg);
+}
+#hamburger.active .line:nth-child(3){
+  transform: translateY(-15px) rotate(-45deg);
+}
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	opacity: 0.87;
+	background-color: #6c9c5a;
+	transition: all 0.5s ease-in-out;
+	transform: translateX(-100%);
+	visibility:hidden;
+}
+.menu.active {
+	display: flex;
+	visibility: visible;
+	transform: translateX(0%);
+}
+.menu__item {
+	margin-bottom: 80px;
+	z-index: 1;
+}
+.menu__link {
+	text-decoration: none;
+	color: white;
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: sansusWebissimo, sans-serif;
+}

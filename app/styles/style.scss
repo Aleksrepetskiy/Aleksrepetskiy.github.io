@@ -15,6 +15,7 @@ body {
 }
 .wrapper {
 	min-width: 320px;
+	overflow: hidden;
 }
 
 * {
@@ -184,122 +185,8 @@ img {
 	transform: rotate(180deg);
 }
 
-.social {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
+@import 'common/header';
 
-.social__item + .social__item {
-	margin-left: 10px;
-}
-
-.social__link {
-	display: block;
-}
-
-.icon-svg {
-	width: 30px;
-	height: 30px;
-	vertical-align: middle;
-	fill: $litegray;
-	cursor: pointer;
-}
-
-.icon-svg--in {
-	height: 22px;
-}
-
-.icon-svg:hover {
-	fill: $green;
-}
-
-.user {
-	text-align: center;
-}
-
-.user__img {
-	border-radius: 100%;
-	overflow: hidden;
-	max-width: 140px;
-	margin: 0 auto;
-}
-
-.user__name {
-	font-size: 35px;
-	font-weight: 500;
-	line-height: 41px;
-	color: $white;
-}
-
-.user__info {
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 24px;
-	color: $white;
-}
-
-.user-description__title {
-	text-align: center;
-}
-
-.menu {
-	margin: 0;
-	padding: 0;
-}
-
-.hamburger {
-	width: 40px;
-	height: 35px;
-	background: url('../images/icons/hamburger.svg');
-	cursor: pointer;
-}
-
-.menu {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	position: fixed;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	opacity: 0.87;
-	background-color: #6c9c5a;
-	z-index: 2;
-}
-
-.menu::after {
-	content: '';
-	display: block;
-	width: 40px;
-	height: 35px;
-	background: url('../images/icons/hamburger.svg');
-	top: 30px;
-	right: 30px;
-	position: absolute;
-}
-
-.menu__item {
-	margin-bottom: 80px;
-}
-
-.menu__link {
-	text-decoration: none;
-	color: white;
-	font-size: 45px;
-	line-height: 45px;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-family: sansusWebissimo, sans-serif;
-}
 .skills-row__list {
 	display: flex;
 	flex-wrap: wrap;
@@ -450,10 +337,10 @@ blockquote {
 .rewiew+.rewiew{
 	margin-left: 20px;
 }
-.rewiew__foto {
+.rewiew__photo {
 	margin-bottom: 20px;
 }
-.rewiew__foto img {
+.rewiew__photo img {
 	margin: 0 auto;
 }
 .rewiew__text {

@@ -3,61 +3,64 @@ block variables
     - var title = 'Главная'
 block content
     section.start
+        div.hero__background
+            canvas.Background-canvas
         div.start__btn-autorization
-            button.btn-border(href="#") Авторизоваться
+            button.btn-border#autorization(href="#") Авторизоваться
         div.start__autorization.flex-box
-            div.autorization
-                h2.h2 Авторизуйтесь 
-                div.form
-                    form(id="", method="", action="")
-                        div.input-container
-                            div.input__box.input__box--login
-                                input.input.input--login(
-                                  type='text'
-                                  name='login'
-                                  placeholder="Логин"
-                                ) 
-                            div.input__box.input__box--password  
-                                input.input.input--password(
-                                  type='password'
-                                  name='password'
-                                  placeholder="Пароль"
-                                )  
-                            div.input__box.input__checkbox
-                                input.input.input--checkbox(type='checkbox' name='check' id='checkbox' checked)
-                                label.label(for='checkbox') Я человек 
-                            div.form__ask Вы точно не робот? 
-                            div.input__box.input__box--radio 
-                                input.input.input--radio(type='radio' name='radio' id='radio1' )
-                                label.label(for='radio1') Да
-                                input.input.input--radio(type='radio' name='radio' id='radio2' )
-                                label.label(for='radio2') Не уверен
-                        .autorization__buttons.flex-box
-                            a.button(href='google.com') На главную
-                            button.button(type='submit') Войти
-            div.autorization.autorization__none
-                        div.start__foto
-                            div.my-foto
-                                img.my-foto__img(src="images/repeckiy.jpg", alt="")
-                        div.my-name Репецкий Александр
-                        div.my__text Личный сайт веб разработчика
-                        div.start__socials
-                            ul.social
-                                - 
-                                   var items = [
-                                     ['vk', 'https://vk.com/id10183899'],
-                                     ['github', 'https://github.com/Aleksrepetskiy'],
-                                     ['in', 'https://www.linkedin.com/in/aleksrepetskiy/'],
-                                   ]
-                                each item in items
-                                    li.social__item
-                                        a(href=`${item[1]}` class=`social__link social__link--${item[0]}`)
-                                            svg(class=`icon-svg icon-svg--${item[0]}`)
-                                                use(xlink:href=`images/icons/sprite.svg#${item[0]}`) 
-                        .autorization__buttons.flex-box
-                            a.button(href='/portfolio.html') Мои работы
-                            a.button(href='/about.html') Обо мне
-                            a.button(href='/blog.html') Блог
+            div.flipper
+                div.autorization-registr
+                    h2.h2 Авторизуйтесь 
+                    div.form
+                        form(id="", method="", action="")
+                            div.input-container
+                                div.input__box.input__box--login
+                                    input.input.input--login(
+                                      type='text'
+                                      name='login'
+                                      placeholder="Логин"
+                                    ) 
+                                div.input__box.input__box--password  
+                                    input.input.input--password(
+                                      type='password'
+                                      name='password'
+                                      placeholder="Пароль"
+                                    )  
+                                div.input__box.input__checkbox
+                                    input.input.input--checkbox(type='checkbox' name='check' id='checkbox' checked)
+                                    label.label(for='checkbox') Я человек 
+                                div.form__ask Вы точно не робот? 
+                                div.input__box.input__box--radio 
+                                    input.input.input--radio(type='radio' name='radio' id='radio1' )
+                                    label.label(for='radio1') Да
+                                    input.input.input--radio(type='radio' name='radio' id='radio2' )
+                                    label.label(for='radio2') Не уверен
+                            .autorization__buttons.flex-box
+                                button.button#index На главную
+                                button.button(type='submit') Войти
+                div.autorization
+                            div.start__photo
+                                div.my-photo
+                                    img.my-photo__img(src="images/repeckiy.jpg", alt="")
+                            div.my-name Репецкий Александр
+                            div.my-text Личный сайт веб разработчика
+                            div.start__socials
+                                ul.social
+                                    - 
+                                       var items = [
+                                         ['vk', 'https://vk.com/id10183899'],
+                                         ['github', 'https://github.com/Aleksrepetskiy'],
+                                         ['in', 'https://www.linkedin.com/in/aleksrepetskiy/'],
+                                       ]
+                                    each item in items
+                                        li.social__item
+                                            a(href=`${item[1]}` class=`social__link social__link--${item[0]}`)
+                                                svg(class=`icon-svg icon-svg--${item[0]}`)
+                                                    use(xlink:href=`images/icons/sprite.svg#${item[0]}`) 
+                            .autorization__buttons.flex-box
+                                a.button(href='/portfolio.html') Мои работы
+                                a.button(href='/about.html') Обо мне
+                                a.button(href='/blog.html') Блог
         div.start__copyrating
             .copyrating 
                 span.copyrating__line.copyrating__line--name &copy; Репецкий Александ
