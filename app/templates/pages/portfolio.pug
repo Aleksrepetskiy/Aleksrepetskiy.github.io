@@ -1,16 +1,17 @@
 extends ../template
 block variables
     - var title = 'Портфоио'
+    - var wrapper = 'portfolio'
+    - var title__pic = 'img class="section__title__pic" src="images/portfolio_header.png"'
 block content
-    include ../common/header.pug
-    section.section.portfolio
+    main.section.portfolio
         div.bloc-decor
             include ../common/triangle.pug
         div.portfolio__title
             div.block-title Мои работы
                 div.title-bg__works
         div.portfolio__slider
-            div.slider
+            include ../common/slider.pug
                 
         div.portfolio__content
             div.portfolio__title
@@ -61,5 +62,3 @@ block content
                             button.button(type='reset') Очистить
             div.portfolio__arrow
                 button(type="button").arrow-up 
-
-    include ../common/footer.pug

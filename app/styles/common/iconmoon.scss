@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?ykh9b0');
+  src:  url('../fonts/icomoon/icomoon.eot?ykh9b0#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?ykh9b0') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?ykh9b0') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?ykh9b0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-about_bg_left:before {
+  content: "\e900";
+  color: #f0efe9;
+}
+.icon-about_bg_right:before {
+  content: "\e901";
+  color: #efebe0;
+}
+.icon-about_header:before {
+  content: "\e902";
+  color: #6e7171;
+}
+.icon-arrow_down:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-bg:before {
+  content: "\e904";
+  color: #fbf8f1;
+}
+.icon-blog_header:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-check:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-envelope:before {
+  content: "\e907";
+  color: #00bfa5;
+}
+.icon-envelope_n:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-envelope2:before {
+  content: "\e909";
+  color: #00bea4;
+}
+.icon-github:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-github_round:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-hamburger:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-in:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-in_round:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-link:before {
+  content: "\e90f";
+  color: #fff;
+}
+.icon-login:before {
+  content: "\e910";
+  color: #c4cbcd;
+}
+.icon-map_marker:before {
+  content: "\e911";
+  color: #00bea4;
+}
+.icon-map_n:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-password:before {
+  content: "\e913";
+  color: #c4cbcd;
+}
+.icon-phone:before {
+  content: "\e914";
+  color: #00bfa5;
+}
+.icon-phone_n:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-phone2:before {
+  content: "\e916";
+  color: #00bea4;
+}
+.icon-portf_arrow_down:before {
+  content: "\e917";
+  color: #fff;
+}
+.icon-portf_arrow_up:before {
+  content: "\e918";
+  color: #fff;
+}
+.icon-portfolio_header:before {
+  content: "\e919";
+  color: #fefefe;
+}
+.icon-skype:before {
+  content: "\e91a";
+  color: #00bfa5;
+}
+.icon-skype_n:before {
+  content: "\e91b";
+}
+.icon-stars1:before {
+  content: "\e91c";
+  color: #fff;
+}
+.icon-stars2:before {
+  content: "\e91d";
+  color: #fff;
+}
+.icon-stars3:before {
+  content: "\e91e";
+  color: #fff;
+}
+.icon-telegram_logo:before {
+  content: "\e91f";
+  color: #fff;
+}
+.icon-vk:before {
+  content: "\e920";
+  color: #fff;
+}
+.icon-vk_round:before {
+  content: "\e921";
+  color: #fff;
+}
+.icon-works_header:before {
+  content: "\e922";
+  color: #6e7171;
+}

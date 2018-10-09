@@ -3,8 +3,7 @@ block variables
     - var title = 'Обо мне'
     - var title__pic = 'img class="section__title__pic" src="images/portfolio_header.png"'
 block content
-    include ../common/header.pug
-    section.section.about
+    main.section.about
         div.bloc-decor
             include ../common/triangle.pug
         div.about__left
@@ -66,8 +65,7 @@ block content
                                                 svg.skill__circle(viewBox="0 0 110 110")
                                                     circle( data-v-7aa2d04c="" r="45" cx="50%" cy="50%" fill="none" class="circle__first")
                                                     circle(data-v-7aa2d04c="" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)" class=`circle__second circle__second--${skill}`)
-                                                .skill__title #{skill}
-            
+                                                .skill__title #{skill}            
     section.section.map
         .map__data
             .contacts
@@ -89,5 +87,3 @@ block content
                                     .contacts-row__content.text #{item[1]}
         .google-map
             img(src="images/map.jpg", alt="")
-
-    include ../common/footer.pug

@@ -1,5 +1,19 @@
-.container
-    ul.slider
-        li.slide 1
-        li.slide 2
-        li.slide 3
+section.slider
+	.slider__left
+		.slider__display
+			img(src="images/slider/1.png", alt="")
+		.slider__info
+			.subtitle Сайт школы онлайн Образования
+			.skills HTML , CSS, JAVASCRIPT
+			.slider__btn
+				a(href="#", target="_blank").btn 
+					span.icon.icon-link
+					|Посмотреть сайт
+	.slider__right
+		.slider__controls
+			a(href="#").slider__control.slider__control--prew
+				img(src="images/slider/2.png", alt="")
+				span.icon.icon-portf_arrow_down
+			a(href="#").slider__control.slider__control--next
+				img(src="images/slider/4.png", alt="")
+				span.icon.icon-portf_arrow_up

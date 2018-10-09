@@ -11,8 +11,10 @@ html
         meta(content="ie=edge" http-equiv="x-ua-compatible")
         link(rel="stylesheet", type="text/css", href="/styles/style-min.css")
     body
-        div(class=`wrapper ${wrapper}`)
+        div(class=`wrapper wrapper--${wrapper||' '}`)
+            include common/header.pug
             block content
+            include common/footer.pug
         script(src="/js/common.js" defer)    
     
         

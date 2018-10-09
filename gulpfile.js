@@ -70,7 +70,7 @@ function templates() {
 function styles() {
     return gulp.src('./app/styles/style.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(rename({suffix: '-min'}))
