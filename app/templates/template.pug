@@ -11,6 +11,12 @@ html
         meta(content="ie=edge" http-equiv="x-ua-compatible")
         link(rel="stylesheet", type="text/css", href="/styles/style-min.css")
     body
+        div.loader
+            div.loader-bar
+            div.loader__spinner
+                include ../images/preloader/forest.svg
+            div.loader__percents
+                
         div(class=`wrapper wrapper--${wrapper||' '}`)
             include common/header.pug
             block content
