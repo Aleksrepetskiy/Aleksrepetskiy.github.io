@@ -24,7 +24,7 @@
 	</path>
 </g>
 
-<text transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24">100</text>
+	<text id="loader__percents" stroke="white" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24">0</text>
 	<animate
 		id="check-anim"
 		xlink:href="#check"
@@ -32,27 +32,27 @@
 		begin="0s"
 		values="96; 0"
 		dur="1s"
-		repeatCount="10"
-		calcMode="linear">
+		repeatCount="indefinite"
+		calcMode="ease-in">
 	</animate>
 	<animate
 		id="check-anim2"
 		xlink:href="#check2"
 		attributeName="stroke-dashoffset"
-		begin="check-anim.begin + 0.2s"
+		begin="0s"
 		values="96; 0"
 		dur="1s"
-		repeatCount="10"
+		repeatCount="indefinite"
 		calcMode="linear">
 	</animate>
 	<animate
 		id="check-anim3"
 		xlink:href="#check3"
 		attributeName="stroke-dashoffset"
-		begin="check-anim2.begin + 0.2s"
+		begin="0s"
 		values="96; 0"
 		dur="1s"
-		repeatCount="10"
+		repeatCount="indefinite"
 		calcMode="linear">
 	</animate>
 </svg>
