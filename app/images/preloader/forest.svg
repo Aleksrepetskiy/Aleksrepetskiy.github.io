@@ -24,7 +24,7 @@
 	</path>
 </g>
 
-	<text id="loader__percents" stroke="white" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24">0</text>
+	<text id="loader__percents" stroke="white" transform="matrix(1 0 0 1 19.9785 20.5957)" font-family="'ArialMT'" font-size="24" text-anchor="middle" x="23" y="0">0%</text>
 	<animate
 		id="check-anim"
 		xlink:href="#check"

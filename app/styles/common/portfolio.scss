@@ -1,14 +1,30 @@
 .portfolio {
     position: relative;
 }
+.portfolio__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 900px;
+    z-index: -1;
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+}
 .portfolio .triangle {
     fill: #f8f9f5;
 }
 .portfolio__content {
     position: relative;
-    background: #f4f5f0 url(../images/portfolio__bg.png) 0 0 no-repeat;
-    background-size: cover;
+    // background: #f4f5f0 url(../images/portfolio__bg.png) 0 0 no-repeat;
+    // background-size: cover;
     padding: 70px 0 184px 0;
+    // height: 100vh;
+    // min-height: 650px;
 }
 .portfolio__title {
     max-width: 450px;

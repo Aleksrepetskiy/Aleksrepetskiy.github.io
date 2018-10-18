@@ -2,7 +2,8 @@ extends ../template
 block variables
     - var title = 'Портфоио'
     - var wrapper = 'portfolio'
-    - var title__pic = 'img class="section__title__pic" src="images/portfolio_header.png"'
+    - var title__pic = 'img src="images/section/portfolio.png"'
+    - var background__pic = 'img class="section__title__pic" src="/images/paralax/mountains_for_parallax.jpg"'
 block content
     main.section.portfolio
         div.bloc-decor
@@ -14,6 +15,8 @@ block content
             include ../common/slider.pug
                 
         div.portfolio__content
+            div.portfolio__bg
+                img(src="images/section/water.jpg", alt="")
             div.portfolio__title
                 div.block-title Что обо мне говорят
                     div.container.title-bg__about
