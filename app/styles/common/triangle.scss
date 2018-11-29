@@ -2,13 +2,14 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -150px;
+    bottom: 0;
 }
 .decor {
     display: flex;
 }
 .decor__triang {
     width: 50%;
+    display: flex;
 }
 .triangle {
 	max-height: 150px;

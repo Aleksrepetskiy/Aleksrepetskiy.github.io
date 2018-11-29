@@ -14,11 +14,8 @@ html
         div.loader
             div.loader__spinner
                 include ../images/preloader/forest.svg
-                
-        div(class=`wrapper wrapper--${wrapper||' '}`)
-            include common/header.pug
+        div.wrapper
             block content
-            include common/footer.pug
         script(src="/js/common.js" defer)    
     
         

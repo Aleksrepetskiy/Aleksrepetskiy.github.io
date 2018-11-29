@@ -30,30 +30,53 @@ $(document).ready(function() {
         $("#autorization").show();
     });
 });
-
-$(window).scroll(function () {
-    var wScroll = $(window).scrollTop();
-    (function () {
-        
-        var
-            bg = $('.hero__bg'),
-            sectionText = $('.section__title__pic'),
-            user = $('.user');
-
-            slideIt(bg, wScroll/45);
-            slideIt(sectionText, wScroll/15);
-            slideIt(user, wScroll/3);
-
-        function slideIt(block, strafeAmount) {
-            var strafe = -strafeAmount+'%',
-                transformString = 'translate3d(0,'+strafe +',0)';
-            block.css({
-                'transform' : transformString
-            });
+var parallax = (function() {
+    var bg = document.querySelector('.hero__bg');
+    var user = document.querySelector('.user');
+    var sectionText = document.querySelector('.section__title img');
+    return {
+        move: function (block, windowScroll, strafeAmount ) {
+            var strafe = windowScroll/-strafeAmount + '%';
+            var transformString = 'translate3d(0,'+ strafe +', 0)';
+            var style = block.style;
+            style.transform = transformString;
+            style.webkitTransform = transformString;
+        },
+        init: function (wScroll) {
+            this.move(bg, wScroll, 45);
+            this.move(sectionText, wScroll, 15);
+            this.move(user, wScroll, 4);
         }
+    }
+}());
 
-    }());
-});
+window.onscroll = function () {
+    var wScroll = window.pageYOffset;
+    parallax.init(wScroll);
+}
+// $(window).scroll(function () {
+//     var wScroll = $(window).scrollTop();
+//     (function () {
+//
+//         var
+//             bg = $('.hero__bg'),
+//             sectionText = $('.section__title__pic'),
+//             user = $('.user');
+//
+//             slideIt(bg, wScroll/45);
+//             slideIt(sectionText, wScroll/15);
+//             slideIt(user, wScroll/3);
+//
+//         function slideIt(block, strafeAmount) {
+//             var strafe = -strafeAmount+'%',
+//                 transformString = 'translate3d(0,'+strafe +',0)';
+//             block.css({
+//                 'transform' : transformString
+//             });
+//         }
+//
+//     }());
+// });
 
 // /**
 //  * @module preloader
@@ -159,3 +182,36 @@ $(window).scroll(function () {
 //         init: init
 //     };
 // })();
+
+var blur = (function () {
+    var wrapper = document.querySelector('.js-blur-wr'),
+        form    = document.querySelector('.js-blur-form'),
+        block   = document.querySelector('.js-blur');
+    return {
+        set: function () {
+            var
+                blockHeight = block.offsetHeight,
+                blockWidth = block.offsetWidth,
+                posTop = -wrapper.offsetTop,
+                blurCss = form.style,
+                wr = wrapper.offsetHeight,
+                blockHeigh2 = posTop-wr/2;
+                blurCss.width = blockWidth + 'px';
+                blurCss.height = blockHeight + 'px';
+                blurCss.transform = 'translate(-50%,' + blockHeigh2 + 'px)';
+                blurCss.webkitTransform = 'translate(-50%,' + blockHeigh2 + 'px)';
+                blurCss.mozTransform = 'translate(-50%,' + blockHeigh2 + 'px)';
+            // blurCss.backgroundSize = imgWidth + 'px' + ' ' + 'auto';
+            // blurCss.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
+
+        }
+
+    }
+}());
+
+window.onresize = function () {
+    blur.set();
+}
+window.onload = function() {
+  blur.set();
+};

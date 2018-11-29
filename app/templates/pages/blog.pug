@@ -6,6 +6,7 @@ block variables
     - var background__pic = 'img src="/images/paralax/mountains_for_parallax.jpg"'
     - var title__pic = 'img class="section__title__pic" src="images/blog_header.png"'
 block content
+    
     div.fixed
         div.blog__container
             div.blog__menu
@@ -20,7 +21,10 @@ block content
         li.push-menu__item
             a.push-menu__link Почему я выбрал Jade
     div.wrapper_blog
+        include ../common/header.pug
+        include ../common/hero.pug
         main.blog
+            
             div.bloc-decor
                 include ../common/triangle.pug
             div.blog__container.static

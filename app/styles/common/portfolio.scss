@@ -18,17 +18,9 @@
 .portfolio .triangle {
     fill: #f8f9f5;
 }
-.portfolio__content {
-    position: relative;
-    // background: #f4f5f0 url(../images/portfolio__bg.png) 0 0 no-repeat;
-    // background-size: cover;
-    padding: 70px 0 184px 0;
-    // height: 100vh;
-    // min-height: 650px;
-}
 .portfolio__title {
-    max-width: 450px;
-    margin: 0 auto;
+    background-color: #f8f9f5;
+    text-align: center;
 }
 .portfolio__form {
     max-width: 380px;
@@ -39,7 +31,7 @@
     padding-top: 25px;
 }
 .portfolio__rewiews {
-    margin-bottom: 60px;
+    margin-bottom: rem(40px);
 }
 .portfolio__form .block-subtitle {
     display: block;
@@ -52,4 +44,53 @@
 .portfolio__arrow {
     text-align: center;
     margin: 65px 0;
+}
+
+.blur {
+    padding: 0 0 300px 0;
+    position: relative;
+    overflow: hidden;
+    background-image: url('/images/section/water.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+// .blur__bg {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     min-width: 900px;
+//
+// }
+// .blur__img {
+//     display: block;
+//     max-width: 100%;
+//
+// }
+.blur__form-wr {
+    width: 380px;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.blur__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url('/images/section/water.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    filter: blur(20px);
+    transform: translate(-50%,-50%);
+    // background-size: 946px;
+
+}
+.ttl--reviews {
+    max-width: 420px;
 }

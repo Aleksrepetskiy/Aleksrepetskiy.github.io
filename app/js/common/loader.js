@@ -34,7 +34,7 @@ $(document).ready(function() {
             function setPercets(total, current) {
                 var percent = Math.ceil(current / total * 100);
                 if (percent >= 100){
-                    $('.wrapper').css('display', 'block');
+                    $('.wrapper').css('visibility',  'visible');
                     $('.loader').css({
                         'opacity':  '0',
                         'visibility':  'hidden',

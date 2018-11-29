@@ -16,9 +16,6 @@
     .triangle {
         max-height: 100px;
     }
-    .bloc-decor {
-        top: -100px;
-    }
     .skills-row__item+.skills-row__item {
         margin-left: 20px;
     }
@@ -39,15 +36,6 @@
 }
 
 @media only screen and (max-width : 1175px){
-    .footer__col {
-        width: 50%;
-        padding-bottom: 25px;
-    }
-    .footer__col-right {
-        width: 100%;
-        margin-top: 30px;
-        padding-bottom: 0;
-    }
     .skills-row__item {
         margin: 10px 0;
     }
@@ -55,7 +43,7 @@
         margin-left: 10px;
     }
     .portfolio__content {
-        padding-bottom: 270px;
+        padding-bottom: 157px;
     }
 }
 @media only screen and (max-width : 1042px){
@@ -98,9 +86,6 @@
     .triangle {
         max-height: 65px;
     }
-    .bloc-decor {
-        top: -65px;
-    }
     .about__left, .about__right {
         width: 100%;
         padding: 5% 10%;
@@ -130,29 +115,26 @@
         min-width: 320px;
     }
     .portfolio__content {
-        padding-bottom: 320px;
+        padding-bottom: 219px;
+    }
+
+    .footer__row {
+        display: block;
+        text-align: center;
+    }
+    .footer__menu .nav__list, .footer__social .social  {
+        justify-content: center;
+    }
+    blockquote {
+        text-align: center;
     }
 
 }
 @media only screen and (max-width : 710px){
-    .footer__row--grey {
-        padding: 0 20px;
-    }
-    .footer__col {
-        width: 100%;
-        padding: 20px 0;
-        margin: 0;
-    }
-    .footer__col + .footer__col {
-        border-top: 1px solid rgba(55,62,66,0.85);
-        border-left: none;
-    }
-
 
 }
 
 @media only screen and (max-width : 600px){
-
 }
 
 /* Extra Small Devices, Phones */
@@ -225,9 +207,6 @@
         top: 27%;
         width: 200px;
         height: 71px;
-    }
-    .bloc-decor {
-        top: -25px;
     }
     .footer__row--grey {
         padding: 0 10px;

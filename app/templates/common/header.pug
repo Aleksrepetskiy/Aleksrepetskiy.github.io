@@ -1,8 +1,5 @@
-header(class=`header hero flex-box ${Mountan||''}`)
-    div.hero__bg
-        #{background__pic}
-        //- canvas.Background-canvas
-    div.hero__social
+header.header
+    div.header__social
         ul.social
             - 
                 var soc = [
@@ -11,17 +8,17 @@ header(class=`header hero flex-box ${Mountan||''}`)
                 ['in', 'https://www.linkedin.com/in/aleksrepetskiy/'],
                 ]
             each item in soc
-                    li.social__item
-                        a(href=`${item[1]}` class=`social__link social__link--${item[0]}`)
-                            svg(class=`icon-svg icon-svg--${item[0]}`)
-                                use(xlink:href=`images/icons/sprite.svg#${item[0]}`) 
-    div.hero__menu
+                li.social__item
+                    a(href=`${item[1]}` class=`social__link social__link--${item[0]}`)
+                        svg(class=`icon-svg icon-svg--${item[0]}`)
+                            use(xlink:href=`images/icons/sprite.svg#${item[0]}`) 
+    nav.header__menu
         div.hamburger#hamburger
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
         ul.menu#menu
-            - 
+            -
                 var itemk = [
                 ['Мои работы', '/portfolio.html'],
                 ['Обо мне', '/about.html'],
@@ -29,16 +26,5 @@ header(class=`header hero flex-box ${Mountan||''}`)
                 ['Авторизация', '/index.html'],
                 ]
             each item in itemk
-                    li.menu__item
-                        a.menu__link(href=`${item[1]}`, target="_blank") #{item[0]}
-    div.section__title
-        #{title__pic}            
-    div.hero__user
-        div.user
-            div.avatar
-                div.avatar__box
-                    img(src="images/repeckiy.jpg", alt="")
-            div.user__name Репецкий Александр
-            div.user__info Личный сайт веб разработчика
-    div.hero__scroll-btn
-        button(type="button").arrow-down 
+                li.menu__item
+                    a.menu__link(href=`${item[1]}`, target="_blank") #{item[0]}

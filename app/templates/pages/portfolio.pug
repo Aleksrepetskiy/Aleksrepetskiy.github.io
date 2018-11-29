@@ -5,41 +5,101 @@ block variables
     - var title__pic = 'img src="images/section/portfolio.png"'
     - var background__pic = 'img class="section__title__pic" src="/images/paralax/mountains_for_parallax.jpg"'
 block content
-    main.section.portfolio
+    include ../common/header.pug
+    main.portfolio
+        include ../common/hero.pug
         div.bloc-decor
             include ../common/triangle.pug
-        div.portfolio__title
-            div.block-title Мои работы
-                div.title-bg__works
+        .portfolio__title
+            div.ttl
+                h2.ttl__h2 Мои работы
+                div.ttl__bg
+                    include ../../images/icons/works_header.svg
         div.portfolio__slider
             include ../common/slider.pug
                 
-        div.portfolio__content
-            div.portfolio__bg
-                img(src="images/section/water.jpg", alt="")
-            div.portfolio__title
-                div.block-title Что обо мне говорят
-                    div.container.title-bg__about
+        //- div.portfolio__content
+        //-     div.portfolio__bg
+        //-         img(src="images/section/water.jpg", alt="")
+        //-     div.portfolio__title
+        //-         div.block-title Что обо мне говорят
+        //-             div.container.title-bg__about
+        //-     div.portfolio__rewiews
+        //-         div.container
+        //-             div.rewiews 
+        //-                 div.rewiew
+        //-                     div.rewiew__photo
+        //-                         img(src="images/rewiews/1.png", alt="")
+        //-                     div.rewiew__text.
+        //-                         Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        //-                     div.rewiew__signature 
+        //-                         div.rewiew__name Ковальчук Дмитрий 
+        //-                         div.rewiew__position — основатель Loftschool
+        //-                 div.rewiew
+        //-                     div.rewiew__photo
+        //-                         img(src="images/rewiews/2.png", alt="")
+        //-                     div.rewiew__text.
+        //-                         Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        //-                     div.rewiew__signature 
+        //-                         div.rewiew__name Сабанцев Владимир 
+        //-                         div.rewiew__position — преподаватель
+        //-     div.portfolio__form
+        //-         div.form
+        //-             form(id="", method="", action="")
+        //-                 div.block-subtitle Связаться со мной
+        //-                 div.input-container
+        //-                     div.input__box
+        //-                         input.input(
+        //-                           type='text'
+        //-                           name='name'
+        //-                           placeholder="Имя"
+        //-                         ) 
+        //-                     div.input__box
+        //-                         input.input(
+        //-                           type='e-mail'
+        //-                           name='e-mail'
+        //-                           placeholder="Email"
+        //-                         ) 
+        //-                     div.input__box
+        //-                         textarea.input(rows="6"
+        //-                           placeholder="Ваше сообщение"
+        //-                         ) 
+        //-                 .autorization__buttons.flex-box
+        //-                     button.button(type='submit') Отправить
+        //-                     button.button(type='reset') Очистить
+        //-     div.portfolio__arrow
+        //-         button(type="button").arrow-up 
+        section.blur.js-blur
+            //- div.blur__bg
+            //-     img.blur__img(src="images/section/water.jpg", alt="")
+            div.ttl.ttl--reviews
+                h2.ttl__h2 Что обо мне говорят
+                div.ttl__bg
+                    include ../../images/icons/about_header.svg
             div.portfolio__rewiews
                 div.container
-                    div.rewiews 
-                        div.rewiew
-                            div.rewiew__photo
-                                img(src="images/rewiews/1.png", alt="")
-                            div.rewiew__text.
-                                Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                            div.rewiew__signature 
-                                div.rewiew__name Ковальчук Дмитрий 
-                                div.rewiew__position — основатель Loftschool
-                        div.rewiew
-                            div.rewiew__photo
-                                img(src="images/rewiews/2.png", alt="")
-                            div.rewiew__text.
-                                Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-                            div.rewiew__signature 
-                                div.rewiew__name Сабанцев Владимир 
-                                div.rewiew__position — преподаватель
-            div.portfolio__form
+                    div.rewiew
+                        ul.rewiew__list
+                            li.rewiew__item
+                                div.rewiew__text.
+                                    Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                                div.rewiew__descriptions
+                                    div.rewiew__photo
+                                        img(src="images/rewiews/1.png", alt="")
+                                    div.rewiew__signature 
+                                        div.rewiew__name Ковальчук Дмитрий 
+                                        div.rewiew__position — основатель Loftschool                        
+                            li.rewiew__item
+                                div.rewiew__text.
+                                    Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                                div.rewiew__descriptions
+                                    div.rewiew__photo
+                                        img(src="images/rewiews/2.png", alt="")
+                                    div.rewiew__signature 
+                                        div.rewiew__name Сабанцев Владимир 
+                                        div.rewiew__position — преподаватель                     
+            div.blur__form-wr.js-blur-wr
+                div.blur__form.js-blur-form
                 div.form
                     form(id="", method="", action="")
                         div.block-subtitle Связаться со мной
@@ -63,5 +123,4 @@ block content
                         .autorization__buttons.flex-box
                             button.button(type='submit') Отправить
                             button.button(type='reset') Очистить
-            div.portfolio__arrow
-                button(type="button").arrow-up 
+    include ../common/footer.pug

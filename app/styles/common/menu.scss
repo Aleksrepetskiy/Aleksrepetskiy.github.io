@@ -1,10 +1,30 @@
-.menu__list {
-    margin: 0;
-    padding: 0;
-    .menu__item {
-        display: inline-block;
-    }
-    .menu__link {
-        color: red;
-    }
+.hamburger {
+	width: 40px;
+	height: 35px;
+	cursor: pointer;
+	z-index: 10;
+	position: relative;
+	.line{
+		width: 40px;
+		height: 5px;
+		background-color: #ecf0f1;
+		border-radius: 2px;
+		display: block;
+		transition: all 0.3s ease-in-out;
+		+.line {
+			margin-top: 10px;
+		}
+	}
+	&.active {
+		.line:nth-child(2){
+		  opacity: 0;
+		}
+		.line:nth-child(1){
+		  transform: translateY(15px) rotate(45deg);
+		}
+		.line:nth-child(3){
+		  transform: translateY(-15px) rotate(-45deg);
+		}
+
+	}
 }

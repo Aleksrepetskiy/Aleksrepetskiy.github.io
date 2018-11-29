@@ -3,8 +3,6 @@
 @import 'mixins/mixin';
 @import 'common/iconmoon';
 @import 'common/variables.scss';
-@import 'common/menu';
-@import 'common/slider.scss';
 html {
 	font-size: 16px;
 }
@@ -18,13 +16,14 @@ body {
 	position: relative;
 }
 .wrapper {
-	display: none;
 	min-width: 320px;
 	overflow: hidden;
 	height: 100%;
+	visibility: hidden;
 }
 .loader {
 	background: url(../images/preloader/forest_prel_bg.jpg) 0 0 no-repeat;
+	background-size: cover;
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -127,6 +126,56 @@ p {
 		background-color: $darkgray;
 	}
 }
+.ttl {
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+}
+.ttl__h2 {
+	position: relative;
+	color: $darkgray;
+	font-family: sansusWebissimo, sans-serif;
+	font-size: rem(63px);
+	font-weight: 400;
+	line-height: em(66px,63px);
+	text-transform: uppercase;
+	text-align: center;
+	padding: rem(60px) 0;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	&::before {
+		content: '';
+		width: rem(22px);
+		height: rem(5px);
+		opacity: 0.2;
+		background-color: #373e42;
+		margin-top: rem(30px);
+		margin-right: rem(20px);
+	}
+	&::after {
+		content: '';
+		width: rem(22px);
+		height: rem(5px);
+		opacity: 0.2;
+		background-color: #373e42;
+		margin-top: rem(30px);
+		margin-left: rem(20px);
+	}
+}
+.ttl__bg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 120%;
+	transform: translate(-50%, -50%);
+	svg {
+		fill: #6e7171;
+		opacity: 0.07;
+		width: 100%;
+	}
+}
+
 
 .block-subtitle {
 	display: inline-block;
@@ -296,27 +345,6 @@ img {
 .circle__second {
 	stroke: #1bb696;
 }
-
-.footer .icon-svg:hover {
-	fill: $white;
-}
-
-.footer .text-content p {
-	color: white;
-	font-weight: normal;
-	margin-bottom: 0;
-}
-
-.footer__social {
-	margin-top: 20px;
-}
-
-blockquote {
-	margin: 0;
-	font-style: italic;
-	opacity: 0.5;
-}
-
 .nav__list {
 	display: flex;
 }
@@ -366,6 +394,9 @@ blockquote {
 .input__box+.input__box {
 	margin-top: 20px;
 }
+.form {
+	position: relative;
+}
 .form__ask {
 	margin: 20px 0;
 }
@@ -378,19 +409,21 @@ blockquote {
 	font-size: 16px;
 	border: none;
 	border-radius: 25px;
+	background-color: #f8f9f5;
 }
-.rewiews {
+.rewiew__list {
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
+	position: relative;
 }
-.rewiew {
+.rewiew__item {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
-}
-.rewiew+.rewiew{
-	margin-left: 20px;
+	&+& {
+		margin-left: 20px;
+	}
 }
 .rewiew__photo {
 	margin-bottom: 20px;
@@ -404,15 +437,10 @@ blockquote {
 	font-style: italic;
 	line-height: 26px;
 	position: relative;
-	margin-bottom: auto;
+	margin-bottom: 20px;
 }
-.rewiew__text::before{
-	content: '\201c';
-	font-size: 200px;
-	position: absolute;
-	top: 45px;
-	left: -22px;
-	opacity: 0.1;
+.rewiew__descriptions {
+	display: flex;
 }
 .rewiew__signature  {
 	margin-top: 30px;
@@ -425,11 +453,68 @@ blockquote {
 .rewiew__signature {
 	text-align: center;
 }
+/*SOCIAL*/
+.social {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	.icon-svg {
+		width: 30px;
+		height: 30px;
+		vertical-align: middle;
+		fill: $litegray;
+	}
+	.icon-svg--in {
+		height: 22px;
+	}
+}
+.social__item + .social__item {
+	margin-left: 10px;
+}
+.social__link {
+	display: block;
+}
+/*AVATAR*/
+.avatar {
+	&__box {
+		border-radius: 50% 50%;
+		overflow: hidden;
+		width: 140px;
+		margin: 0 auto;
+	}
+	margin-bottom: 30px;
+}
+.user {
+	text-align: center;
+}
+.user__name {
+	font-size: 35px;
+	font-weight: 500;
+	line-height: 41px;
+	color: $white;
+}
+
+.user__info {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: $white;
+}
+
+.user-description__title {
+	text-align: center;
+}
+@import 'common/header';
+@import 'common/menu';
+@import 'common/slider.scss';
 @import 'common/triangle';
 @import 'common/index';
+@import 'common/hero';
 @import 'common/about';
 @import 'common/blog';
 @import 'common/portfolio';
 @import 'common/footer';
-
 @import 'common/media';
